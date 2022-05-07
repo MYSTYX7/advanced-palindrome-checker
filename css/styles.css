@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab|Zilla+Slab+Highlight");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  font-family: "Titillium Web", sans-serif;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 4rem;
+  background: -webkit-linear-gradient(rgb(118, 71, 192), rgb(119, 1, 255));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: #7f8ff4;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  flex: 1 1 auto;
+}
+.flex-container .container-left {
+  margin-left: 2em;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  font-family: "Zilla Slab", serif;
+}
+.flex-container .container-left .text {
+  color: black;
+  padding: 3em;
+  border-radius: 2em;
+  background: #f8f8f8;
+}
+.flex-container .container-left .text .text-header {
+  font-size: 2rem;
+}
+.flex-container .container-left .text .text-body {
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+}
+.flex-container .container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font: 1rem "Zilla Slab", serif;
+  flex: 3;
+  margin-top: 4rem;
+}
+
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+.btn--primary {
+  background: #7f8ff4;
+  color: #fff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 12px 36px;
+}
+.btn--primary:hover {
+  background: #6c7ff2;
+}
+.btn--primary:active {
+  background: #7f8ff4;
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+.btn--inside {
+  margin-left: -96px;
+}
+
+.input-text {
+  width: 400px;
+  background: #fff;
+  color: black;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+  margin: 10px auto;
+}
+
+.result-container {
+  text-align: center;
+  font-size: 25px;
+  padding: 2em;
+}
+
+.result, .result1 {
+  display: inline;
+}
+
+.result::before .result1::before {
+  visibility: hidden;
+}
+
+.result::after .result1::after {
+  visibility: visible;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-family: "Titillium Web", sans-serif;
+}
+footer h3 {
+  margin: 5px;
+}/*# sourceMappingURL=styles.css.map */

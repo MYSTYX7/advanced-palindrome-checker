@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab|Zilla+Slab+Highlight');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+
+//** variables
+
+$input-bg-color: #fff;
+$input-text-color: black;
+$button-bg-color: #7f8ff4;
+$button-text-color: #fff;
+
+//** root
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	font-family: 'Titillium Web', sans-serif;
+	text-align: center;
+	margin-top: 30px;
+	font-size: 4rem;
+	background: -webkit-linear-gradient(rgb(118, 71, 192), rgb(119, 1, 255));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+a {
+	color: inherit;
+	
+	&:hover {
+		color: $button-bg-color;
+	}
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	margin-top: 4rem;
+	flex: 1 1 auto;
+
+	.container-left{
+		margin-left: 2em;
+		align-items: center;
+		justify-content: center;
+		flex: 2;
+		font-family: 'Zilla Slab', serif;
+	
+		.text{
+			color: black;
+			padding: 3em;
+			border-radius: 2em;
+			background: #f8f8f8;
+			.text-header{
+				font-size: 2rem;
+			}
+			.text-body{
+				font-size: 1.2rem;
+				padding-top: 0.5rem;
+			}
+		}
+	}
+
+	.container-right {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font: 1rem 'Zilla Slab', serif;
+		flex: 3;
+		margin-top: 4rem;
+	}
+}
+
+//** button
+.btn {
+	display: inline-block;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	transition: all 200ms ease-in;
+	cursor: pointer;
+	
+	&--primary {
+		background: $button-bg-color;
+		color: $button-text-color;
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+		border-radius: 2px;
+		padding: 12px 36px;
+		
+		&:hover {
+			background: darken($button-bg-color, 4%);
+		}
+		
+		&:active {
+			background: $button-bg-color;
+			box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+		}
+	}
+	
+	&--inside {
+		margin-left: -96px;
+	}
+}
+
+//** form
+.input-text {
+	width: 400px;
+	background: #fff;
+	color: $input-text-color;
+	font: inherit;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+	border: 0;
+	outline: 0;
+	padding: 22px 18px;
+	margin: 10px auto;
+}
+.result-container{
+	text-align: center;
+	font-size: 25px;
+	padding: 2em;
+}
+.result, .result1 {
+    display: inline;
+}
+.result::before .result1::before {
+	visibility: hidden;
+}
+.result::after .result1::after {
+	visibility: visible;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-weight: 400;
+	font-family: 'Titillium Web', sans-serif;
+	h3{
+	  margin: 5px;
+	}
+  }
